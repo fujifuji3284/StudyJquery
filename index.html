@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<script src="http://code.jquery.com/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="UTF-8">
+		$(function(){
+			$('a[href^=#]').click(function(){
+				var href= $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var here=target.offset().top - 44;
+				$('body,html').animate({scrollTop:here},600);
+				return false;
+			});
+		});
+	</script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>ホーム</title>
+</head>
+<body>
+	<div id="container">
+		<div id="btn">
+			<ul class="clearfix">
+				<li><a href="#top">TOP</a></li>
+				<li><a href="#page2">２ページ</a></li>
+				<li><a href="#page3">３ページ</a></li>
+				<li><a href="#page4">４ページ</a></li>
+				<li><a href="#page5">５ページ</a></li>
+			</ul>
+		</div>
+		<div id="top">
+			
+		</div>
+		<div id="page2">
+			
+		</div>
+		<div id="page3">
+			
+		</div>
+		<div id="page4">
+			
+		</div>
+		<div id="page5">
+			
+		</div>
+	</div>
+</body>
+</html>
