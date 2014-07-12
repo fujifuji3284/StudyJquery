@@ -3,18 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="">
-	<script src="http://code.jquery.com/jquery.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" charset="UTF-8">
-		$(function(){
-			$('a[href^=#]').click(function(){
-				var href= $(this).attr("href");
-				var target = $(href == "#" || href == "" ? 'html' : href);
-				var here=target.offset().top - 44;
-				$('body,html').animate({scrollTop:here},600);
-				return false;
-			});
-		});
-	</script>
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="index.js" type="text/javascript" charset="UTF-8"></script>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<title>ホーム</title>
 </head>
@@ -30,6 +20,12 @@
 			</ul>
 		</div>
 		<div id="top">
+			<h1>見出し</h1>
+			<form action="#">
+				<p><input type="text" name="txt1" value="テキスト入力"></p>
+				<p><textarea name="txt2" cols="30" rows="10" value="テキストを入れてください">テキストを入れてください</textarea></p>
+				<p><input type="submit" name="submit"><input type="reset" name="reset"></p>
+			</form>
 			
 		</div>
 		<div id="page2">
