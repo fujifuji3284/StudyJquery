@@ -21,5 +21,15 @@ $(function(){
 		};
 	});
 	//テキストフォーカス時消す終了
+	//
+	$('#btn input').focusin(function(){
+		$('#btn li:not(:last)').animate({width:960 / 9 - 5},500);
+		$('#btn li:last').animate({width:960 / 9 + 40},500);
+		$('#btn input').animate({width:960 / 9 + 20},500);
+	});
+	$('#btn input').blur(function(){
+		$('#btn li').animate({width:960 / 9},500);
+		$('#btn input').animate({width:80},500);
+	});
 });
 
